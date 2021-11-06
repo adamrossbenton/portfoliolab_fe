@@ -32,6 +32,25 @@
   }
 }
 
+#homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  background-color: darkgray;
+  color: wheat;
+  animation: blinker 1.05s linear infinite
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 #issa {
   max-width: 80%
 }

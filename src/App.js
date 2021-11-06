@@ -14,14 +14,12 @@ function App() {
 
   return (
     <div className="App">
-      <div className="homepage-format">
         <Header/>
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route path="/projects" element={<Projects URL={URL}/>}/>
           <Route path="/about" element={<About URL={URL}/>}/>
         </Routes>
-      </div>
       <Footer/>
     </div>
   );
