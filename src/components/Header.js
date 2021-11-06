@@ -1,27 +1,33 @@
 import { Link } from "react-router-dom"
+import {Button} from "../Styles"
 
 const Header =props => {
     const navStyle = {
         display: "flex",
+        flexDirection: "column",
         justifyContent: "space-around",
+        backgroundColor: "rgb(129,83,0)",
         border: "3px solid black",
         padding: "8px",
-        width: "90%",
+        height: "100%",
+        width: "150px",
         margin: "auto",
+        position: "fixed",
+        top: "0px",
+        overflowX: "hidden",
     }
     
     return <>
         <header>
-            <h1>My Portfolio Page</h1>
             <nav style={navStyle}>
                 <Link to="/">
-                    <div>HOME</div>
+                    <Button>HOME</Button>
                 </Link>
                 <Link to="/about">
-                    <div>ABOUT</div>
+                    <Button>ABOUT</Button>
                 </Link>
                 <Link to="/projects">
-                    <div>PROJECTS</div>
+                    <Button>PROJECTS</Button>
                 </Link>
             </nav>
         </header>

@@ -12,7 +12,7 @@ const About = props => {
     useEffect(() => getAboutData(), [])
 
     return <>
-        <div>
+        <div id="about">
             <h2>{about?.name ?? "..."}</h2>
             <h3>{about?.email ?? "..."}</h3>
             {about? <img id="the-beek" src="https://upload.wikimedia.org/wikipedia/commons/5/5b/JamesVanDerBeekSept2013TIFF.jpg" alt="this is literally me"/> : <p>"...</p>}

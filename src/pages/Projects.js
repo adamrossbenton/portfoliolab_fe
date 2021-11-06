@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import {ScrollDiv} from "../Styles"
 
 const Projects = props => {
     const [projects, setProjects] = useState(null)
@@ -12,7 +13,8 @@ const Projects = props => {
     useEffect(() => getProjectsData(), [])
 
     const loaded = ( )=> {
-        return projects.map((project) => (
+        return <ScrollDiv id="projects-flex">
+        {projects.map((project) => (
         <div>
             <h1>{project.name}</h1>
             <img src={project.image} alt=""/>
@@ -23,7 +25,9 @@ const Projects = props => {
                 <button>Live Site</button>
             </a>
         </div>
-    ))
+    ))}
+
+        </ScrollDiv>
     }
 
     return projects ? loaded() : <img src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2021/02/Rickrolling-in-4K.jpg" alt=""/>

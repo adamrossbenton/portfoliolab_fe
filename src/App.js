@@ -14,12 +14,17 @@ function App() {
 
   return (
     <div className="App">
-        <Header/>
-        <Routes>
-          <Route exact path="/" element={<Home/>}/>
-          <Route path="/projects" element={<Projects URL={URL}/>}/>
-          <Route path="/about" element={<About URL={URL}/>}/>
-        </Routes>
+        <h1>My Portfolio Page</h1>
+        <div id="home-flex">
+          <Header/>
+          <div className="routes-container" style={{marginLeft: "200px"}}>
+            <Routes>
+              <Route exact path="/" element={<Home/>}/>
+              <Route path="/projects" element={<Projects URL={URL}/>}/>
+              <Route path="/about" element={<About URL={URL}/>}/>
+            </Routes>
+          </div>
+        </div>
       <Footer/>
     </div>
   );
